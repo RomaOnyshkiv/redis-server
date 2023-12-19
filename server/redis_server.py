@@ -11,6 +11,7 @@ def handle_client(client_socket, data_store):
 
             parts = command.split()
             cmd = parts[0].upper()
+            print(f'Command {cmd} will be executed')
 
             if cmd == 'PING':
                 response = 'PONG'
