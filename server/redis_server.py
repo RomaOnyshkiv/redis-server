@@ -71,7 +71,7 @@ def handle_client(client_socket, data_store):
 
 
 def start_server():
-    host, port = '127.0.0.1', 6379
+    host, port = '0.0.0.0', 6379
     server_socket = socket.socket(socket.AF_INET, socket.SOCK_STREAM)
     server_socket.bind((host, port))
     server_socket.listen(5)
