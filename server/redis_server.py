@@ -59,6 +59,8 @@ def handle_client(client_socket, data_store):
                 else:
                     response = '(empty list or set)'
 
+            elif cmd == 'ALL':
+                response = '\n'.join(data_store)
             else:
                 response = 'ERROR: Unknown Command'
 
