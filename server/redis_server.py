@@ -60,7 +60,8 @@ def handle_client(client_socket, data_store):
                     response = '(empty list or set)'
 
             elif cmd == 'ALL':
-                response = '\n'.join(data_store)
+                response = '\n'.join(data_store) if checkStorage(data_store) else '(nil)'
+
             else:
                 response = 'ERROR: Unknown Command'
 
@@ -72,6 +73,13 @@ def handle_client(client_socket, data_store):
 
     client_socket.close()
 
+
+def checkStorage(storage):
+    for el in storage:
+        if el:
+            return True
+        else:
+            return False
 
 def start_server():
     host, port = '0.0.0.0', 6379
