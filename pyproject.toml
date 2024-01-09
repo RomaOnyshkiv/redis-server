@@ -1,0 +1,8 @@
+[tool.poetry]
+name="redis impl"
+version="0.0.1"
+description="my custom project"
+authors=["Reoman"]
+
+[tool.poetry.dependencies]
+python=">=3.10"
